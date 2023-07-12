@@ -3,6 +3,8 @@
 	"package": "unsafedodo.cobblemonxptoggle.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"XpGain",
+		"PokemonDataSaver"
 	],
 	"injectors": {
 		"defaultRequire": 1

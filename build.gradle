@@ -11,12 +11,14 @@ base {
 }
 
 repositories {
+	mavenCentral()
 	maven {
 		url = uri("https://cursemaven.com")
 		content {
 			includeGroup("curse.maven")
 		}
 	}
+	maven { url "https://maven.architectury.dev/" }
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -46,7 +48,10 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modImplementation("curse.maven:cobblemon-687131:${project.cobblemon_curse_file_id}")
-	
+
+	modImplementation("dev.architectury:architectury:${project.architectury_version}")
+	modApi "dev.architectury:architectury:${project.architectury_version}"
+	//modImplementation("curse.maven:architectury-api-419699:${project.architectury_curse_file_id}")
 	// Uncomment the following line to enable the deprecated Fabric API modules. 
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
